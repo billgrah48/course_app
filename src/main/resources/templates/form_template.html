@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Form</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+<h1>User Registration Form</h1>
+<form th:action="@{/}" th:object="${userForm}" method="post">
+    <div>
+        <label for="firstName">First Name (Optional):</label>
+        <input type="text" id="firstName" th:field="*{firstName}"/>
+        <div th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></div>
+    </div>
+    <div>
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" th:field="*{lastName}" required/>
+        <div th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></div>
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" th:field="*{email}" required/>
+        <div th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+    </div>
+    <div>
+        <label for="creditCard">Credit Card Number:</label>
+        <input type="text" id="creditCard" th:field="*{creditCard}" required/>
+        <div th:if="${#fields.hasErrors('creditCard')}" th:errors="*{creditCard}"></div>
+    </div>
+    <div>
+        <label for="postcode">UK Postcode:</label>
+        <input type="text" id="postcode" th:field="*{postcode}" required/>
+        <div th:if="${#fields.hasErrors('postcode')}" th:errors="*{postcode}"></div>
+    </div>
+    <div>
+        <label for="productCode">Product Code:</label>
+        <input type="text" id="productCode" th:field="*{productCode}" required/>
+        <div th:if="${#fields.hasErrors('productCode')}" th:errors="*{productCode}"></div>
+    </div>
+    <div>
+        <label for="quantity">Quantity (1-10):</label>
+        <input type="number" id="quantity" th:field="*{quantity}" min="1" max="10" required/>
+        <div th:if="${#fields.hasErrors('quantity')}" th:errors="*{quantity}"></div>
+    </div>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

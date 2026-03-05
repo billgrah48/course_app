@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Form Submission Result</title>
+</head>
+<body>
+<div>
+    <h1>Form Submission Result</h1>
+    <p th:text="${successMessage}">Your form was processed successfully!</p>
+
+    <h2>User Details</h2>
+    <ul>
+        <li>First Name: <span th:text="${userForm.firstName}"></span></li>
+        <li>Last Name: <span th:text="${userForm.lastName}"></span></li>
+        <li>Email: <span th:text="${userForm.email}"></span></li>
+        <li>Credit Card: <span th:text="${userForm.creditCard}"></span></li>
+        <li>Postcode: <span th:text="${userForm.postcode}"></span></li>
+        <li>Product Code: <span th:text="${userForm.productCode}"></span></li>
+        <li>Quantity: <span th:text="${userForm.quantity}"></span></li>
+    </ul>
+
+    <a href="/">Back to Form</a>
+</div>
+</body>
+</html>
