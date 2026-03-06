@@ -13,6 +13,12 @@ public class HelloController {
         model.addAttribute("body", "This is my page.");
         return "hello";
     }
+    @GetMapping("/")
+    public String start(Model model) {
+        model.addAttribute("message", "Hello from Spring!");
+        model.addAttribute("body", "This is my page.");
+        return "hello";
+    }
 
 
 }

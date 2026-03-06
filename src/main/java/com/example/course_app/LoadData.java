@@ -1,4 +1,4 @@
-package com.example.course_app;
+/*package com.example.course_app;
 
 
 import org.springframework.boot.CommandLineRunner;
@@ -27,4 +27,4 @@ public class LoadData {
 
     }
 
-}
+}*/

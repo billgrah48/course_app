@@ -15,13 +15,13 @@ public class UserFormController {
         return "form_template";
     }
 
-    @GetMapping("/")
+    @GetMapping("/form")
     public String showForm(Model model) {
         model.addAttribute("userForm", new UserForm());
         return "form_template"; // Ensure that this matches with your form.html template
     }
 
-    @PostMapping("/")
+    @PostMapping("/form")
     public String submitForm(@Valid UserForm userForm, BindingResult result, Model model) {
         if (result.hasErrors()) {
             return "form_template"; // Return to form if there are errors
