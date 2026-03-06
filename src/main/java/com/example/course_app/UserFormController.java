@@ -16,8 +16,7 @@ public class UserFormController {
         return "form_template";
     }
 
-    @RequestMapping("/form")
-    @GetMapping("/form")
+    @GetMapping("/input")
     public String showForm(Model model) {
         model.addAttribute("userForm", new UserForm());
         return "form_template"; // Ensure that this matches with your form.html template
